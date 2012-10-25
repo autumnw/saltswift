@@ -1,0 +1,48 @@
+
+body,
+html {
+margin:0;
+padding:0;
+color:#000;
+background:#D1FFB3;
+}
+
+#wrapper {
+width:80%;
+margin:0 auto;
+background:#888888;
+}
+
+#header {
+padding:5px 10px;
+height:50px;
+background:#080808;
+}
+
+h1 {
+margin:0;
+}
+
+#content {
+float:right;
+width:85%;
+background:#FFFF99;
+}
+
+#sidebar {
+float:left;
+/*padding:10px;*/
+width:15%;
+background:#888888;
+}
+
+#footer {
+clear:both;
+padding:5px 10px;
+height:30px;
+background:#000099;
+}
+
+#footer p {
+margin:0;
+}

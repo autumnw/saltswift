@@ -1,0 +1,17 @@
+{% extends "default/base.html" %}
+{% block title %}Salt swift{% endblock %}
+{% block path %}>Cluster{% endblock %}
+{% block content %}
+		{% if cluster_infor %}
+		<table id="flexme1">
+			<tbody>
+		    {% for key, value in cluster_infor.items %}
+		        <tr>
+		            <td align="right" width=30%>{{key}}</td>
+		            <td align="left" width=70%>{{value}}</td>
+		        </tr>
+		    {% endfor %}
+		    </tbody>
+	    </table>
+	{% endif %}
+{% endblock %}

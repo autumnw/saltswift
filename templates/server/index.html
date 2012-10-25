@@ -1,0 +1,42 @@
+<SCRIPT TYPE="text/javascript">
+	function popup(mylink, windowname)
+	{
+	if (! window.focus)return true;
+	var href;
+	if (typeof(mylink) == 'string')
+	   href=mylink;
+	else
+	   href=mylink.href;
+	window.open(href, windowname, 'width=1000,height=600,scrollbars=yes');
+	return false;
+	}
+</SCRIPT>
+
+{% extends "default/base.html" %}
+{% block title %}Salt swift{% endblock %}
+{% block path %}>Server{% endblock %}
+{% block content %}
+	{% if server_list %}
+		<table id="flexme1">
+			<thead>
+				<tr>
+					<th width="200" align="left">HOST</th>
+					<th width="100" align="left">IP ADDRESS</th>
+					<th width="100" align="left">STATUS</th>
+					<th width="200" align="left">TYPE</th>
+				</tr>
+			</thead>
+			<tbody>
+		    {% for server, ip, status, type in server_list %}
+		        <tr>
+		            <!--<td align="left"><a href="/server/{{server}}" onClick="return popup(this, 'server : {{server}}')">{{server}}</a></td>-->
+		            <td align="left"><a href="/server/{{server}}" >{{server}}</a></td>
+		            <td align="left">{{ip}}</td>
+		            <td align="left">{{status}}</td>
+		            <td align="left">{{type}}</td>
+		        </tr>
+		    {% endfor %}
+		    </tbody>
+	    </table>
+	{% endif %}
+{% endblock %}
